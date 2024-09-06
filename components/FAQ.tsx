@@ -3,8 +3,8 @@
 import { useRef, useState } from "react";
 import type { JSX } from "react";
 
-// <FAQ> component is a lsit of <Item> component
-// Just import the FAQ & add your FAQ content to the const faqList arrayy below.
+// <FAQ> component is a list of <Item> component
+// Just import the FAQ & add your FAQ content to the const faqList array below.
 
 interface FAQItemProps {
   question: string;
@@ -13,22 +13,69 @@ interface FAQItemProps {
 
 const faqList: FAQItemProps[] = [
   {
-    question: "What do I get exactly?",
-    answer: <div className="space-y-2 leading-relaxed">Loreum Ipseum</div>,
+    question: "What services do you offer for web design?",
+    answer: (
+      <div className="space-y-2 leading-relaxed">
+        We offer a range of web design services including:
+        <ul className="list-disc pl-5">
+          <li>Custom website design and development</li>
+          <li>Responsive design for mobile devices</li>
+          <li>E-commerce website development</li>
+          <li>Website redesign and optimization</li>
+          <li>User experience (UX) and user interface (UI) design</li>
+        </ul>
+      </div>
+    ),
   },
   {
-    question: "Can I get a refund?",
+    question: "What is national SEO and how can it benefit my business?",
+    answer: (
+      <div className="space-y-2 leading-relaxed">
+        National SEO is a strategy to improve your website&rsquo;s visibility in search engine results across an entire country. It can benefit your business by:
+        <ul className="list-disc pl-5">
+          <li>Increasing organic traffic from a wider audience</li>
+          <li>Enhancing brand awareness on a national level</li>
+          <li>Improving your competitive edge in your industry</li>
+          <li>Driving more qualified leads and potential customers to your website</li>
+        </ul>
+      </div>
+    ),
+  },
+  {
+    question: "How is local SEO different from national SEO?",
+    answer: (
+      <div className="space-y-2 leading-relaxed">
+        Local SEO focuses on optimizing your online presence to attract more business from relevant local searches. Unlike national SEO, local SEO targets specific cities, regions, or areas. Key differences include:
+        <ul className="list-disc pl-5">
+          <li>Emphasis on Google My Business optimization</li>
+          <li>Focus on local keywords and phrases</li>
+          <li>Importance of local citations and directories</li>
+          <li>Targeting location-specific search results</li>
+        </ul>
+      </div>
+    ),
+  },
+  {
+    question: "Can I request edits or changes to my project?",
     answer: (
       <p>
-        Yes! You can request a refund within 7 days of your purchase. Reach out
-        by email.
+        Yes, you can request edits or changes. Be sure to contact us before 7 days after purchase by email. We&apos;re committed to ensuring your satisfaction with our services.
+      </p>
+    ),
+  },
+  
+  {
+    question: "Do you offer ongoing maintenance and support for websites?",
+    answer: (
+      <p>
+        Yes, we offer ongoing maintenance and support packages for websites we&apos;ve designed. This includes regular updates, security checks, performance optimization, and technical support to ensure your website continues to function smoothly and effectively.
       </p>
     ),
   },
   {
     question: "I have another question",
     answer: (
-      <div className="space-y-2 leading-relaxed">Cool, contact us by email</div>
+      <div className="space-y-2 leading-relaxed">If you have any other questions or need further clarification, please don&apos;t hesitate to contact us by email. We&apos;re here to help!</div>
     ),
   },
 ];

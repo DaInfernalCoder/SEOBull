@@ -1,3 +1,4 @@
+
 export type Theme =
   | "light"
   | "dark"
@@ -20,7 +21,8 @@ export type Theme =
   | "black"
   | "luxury"
   | "dracula"
-  | "";
+  | "nord"
+  | "winter";
 
 export interface ConfigProps {
   appName: string;

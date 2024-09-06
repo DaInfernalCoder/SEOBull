@@ -3,12 +3,12 @@ import { ConfigProps } from "./types/config";
 
 const config = {
   // REQUIRED
-  appName: "ShipFast",
+  appName: "Digital SEO Bull",
   // REQUIRED: a short description of your app for SEO tags (can be overwritten)
   appDescription:
-    "The NextJS boilerplate with all you need to build your SaaS, AI tool, or any other web app.",
+    "The SEO specialist tool to get your website more clicks and traffic from the comfort of your home.",
   // REQUIRED (no https://, not trialing slash at the end, just the naked domain)
-  domainName: "shipfa.st",
+  domainName: "digitalseobull.com",
   crisp: {
     // Crisp website ID. IF YOU DON'T USE CRISP: just remove this => Then add a support email in this config file (mailgun.supportEmail) otherwise customer support won't work.
     id: "",
@@ -25,20 +25,23 @@ const config = {
             ? "price_1Niyy5AxyNprDp7iZIqEyD2h"
             : "price_456",
         //  REQUIRED - Name of the plan, displayed on the pricing page
-        name: "Starter",
+        name: "Local SEO Package",
         // A friendly description of the plan, displayed on the pricing page. Tip: explain why this plan and not others
-        description: "Perfect for small projects",
+        description: "Perfect for businesses who want local traffic",
         // The price you want to display, the one user will be charged on Stripe.
-        price: 99,
+        price: 899,
         // If you have an anchor price (i.e. $29) that you want to display crossed out, put it here. Otherwise, leave it empty
-        priceAnchor: 149,
+        
         features: [
           {
-            name: "NextJS boilerplate",
+            name: "Location specific keyword optimization",
           },
-          { name: "User oauth" },
-          { name: "Database" },
-          { name: "Emails" },
+          { name: "Local-based website content optimization" },
+          { name: "Google My Business Setup and Verification" },
+          { name: "Blog writing" },
+          { name: "Traffic and ranking reports" },
+          { name: "24/7 support, and monthly updates" },
+          { name: "And more..." },
         ],
       },
       {
@@ -48,19 +51,37 @@ const config = {
             : "price_456",
         // This plan will look different on the pricing page, it will be highlighted. You can only have one plan with isFeatured: true
         isFeatured: true,
-        name: "Advanced",
-        description: "You need more power",
-        price: 149,
-        priceAnchor: 299,
+        name: "National SEO Package",
+        description: "You want to build a brand that people know all over the nation",
+        price: 999,
         features: [
           {
-            name: "NextJS boilerplate",
+            name: "National keyword optimization",
           },
-          { name: "User oauth" },
-          { name: "Database" },
-          { name: "Emails" },
-          { name: "1 year of updates" },
-          { name: "24/7 support" },
+          { name: "National website content optimization" },
+          { name: "Google My Business Setup and Verification" },
+          { name: "Social Media account management & blog writing" },
+          { name: "Traffic and ranking reports" },
+          { name: "24/7 support, and monthly updates" },
+          { name: "And more..." },
+        ],
+      },
+      {
+        priceId:
+          process.env.NODE_ENV === "development"
+            ? "price_development_999"
+            : "price_development_999",
+        name: "Web Development Package",
+        description: "Custom development for your SEO needs",
+        price: 1499,
+        features: [
+          { name: "Custom website design and development" },
+          { name: "Fully modular and editable" },
+          { name: "Mobile responsive" },
+          { name: "SEO plugin" },
+          { name: "Google Location Map" },
+          { name: "And more..." },
+          
         ],
       },
     ],
@@ -85,10 +106,10 @@ const config = {
   },
   colors: {
     // REQUIRED — The DaisyUI theme to use (added to the main layout.js). Leave blank for default (light & dark mode). If you any other theme than light/dark, you need to add it in config.tailwind.js in daisyui.themes.
-    theme: "light",
+    theme: "winter",
     // REQUIRED — This color will be reflected on the whole app outside of the document (loading bar, Chrome tabs, etc..). By default it takes the primary color from your DaisyUI theme (make sure to update your the theme name after "data-theme=")
     // OR you can just do this to use a custom color: main: "#f37055". HEX only.
-    main: themes[`[data-theme=light]`]["primary"],
+    main: themes[`[data-theme=winter]`]["winter"],
   },
   auth: {
     // REQUIRED — the path to log in users. It's use to protect private routes (like /dashboard). It's used in apiClient (/libs/api.js) upon 401 errors from our API

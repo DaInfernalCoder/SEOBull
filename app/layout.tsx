@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
 import { Inter } from "next/font/google";
-import { getSEOTags } from "@/libs/seo";
-import ClientLayout from "@/components/LayoutClient";
-import config from "@/config";
+import { getSEOTags } from "../libs/seo";
+import ClientLayout from "../components/LayoutClient";
+import config from "../config";
 import "./globals.css";
 
 const font = Inter({ subsets: ["latin"] });

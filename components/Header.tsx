@@ -5,20 +5,22 @@ import type { JSX } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/app/icon.png";
-import config from "@/config";
+import logo from "../app/icon.png";
+import config from "../config";
+import icon from "../app/icon.png";
+import ButtonPopover from "./ButtonPopover";
 
 const links: {
   href: string;
   label: string;
 }[] = [
   {
-    href: "/#pricing",
-    label: "Pricing",
+    href: "/web-dev",
+    label: "Web Design",
   },
   {
-    href: "/#testimonials",
-    label: "Reviews",
+    href: "/#pricing",
+    label: "Custom Solutions",
   },
   {
     href: "/#faq",
@@ -32,7 +34,7 @@ const cta: JSX.Element = (
 
 // A header with a logo on the left, links in the center (like Pricing, etc...), and a CTA (like Get Started or Login) on the right.
 // The header is responsive, and on mobile, the links are hidden behind a burger button.
-const Header = () => {
+const Header = () => { 
   const searchParams = useSearchParams();
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -42,20 +44,20 @@ const Header = () => {
   }, [searchParams]);
 
   return (
-    <header className="bg-base-200">
+    <header className="bg-gradient-to-r from-blue-100 to-purple-100">
       <nav
         className="container flex items-center justify-between px-8 py-4 mx-auto"
         aria-label="Global"
       >
-        {/* Your logo/name on large screens */}
-        <div className="flex lg:flex-1">
+        
+        <div className="flex lg:flex-1 pl-4 md:pl-24">
           <Link
             className="flex items-center gap-2 shrink-0 "
             href="/"
-            title={`${config.appName} hompage`}
+            title={`${config.appName} homepage`}
           >
             <Image
-              src={logo}
+              src={icon}
               alt={`${config.appName} logo`}
               className="w-8"
               placeholder="blur"
@@ -101,19 +103,20 @@ const Header = () => {
               {link.label}
             </Link>
           ))}
+          <ButtonPopover />
         </div>
 
         {/* CTA on large screens */}
-        <div className="hidden lg:flex lg:justify-end lg:flex-1">{cta}</div>
+        <div className="hidden lg:flex lg:justify-end lg:flex-1 lg:pr-40">{cta}</div>
       </nav>
 
       {/* Mobile menu, show/hide based on menu state. */}
       <div className={`relative z-50 ${isOpen ? "" : "hidden"}`}>
         <div
-          className={`fixed inset-y-0 right-0 z-10 w-full px-8 py-4 overflow-y-auto bg-base-200 sm:max-w-sm sm:ring-1 sm:ring-neutral/10 transform origin-right transition ease-in-out duration-300`}
+          className={`fixed inset-y-0 right-0 z-10 w-full px-8 py-4 overflow-y-auto bg-gradient-to-r from-blue-100 to-purple-100 sm:max-w-sm sm:ring-1 sm:ring-neutral/10 transform origin-right transition ease-in-out duration-300`}
         >
           {/* Your logo/name on small screens */}
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between pl-4 md:pl-8">
             <Link
               className="flex items-center gap-2 shrink-0 "
               title={`${config.appName} hompage`}
@@ -165,6 +168,7 @@ const Header = () => {
                     {link.label}
                   </Link>
                 ))}
+                <ButtonPopover />
               </div>
             </div>
             <div className="divider"></div>

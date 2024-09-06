@@ -8,6 +8,10 @@ import React from "react";
 interface ModalProps {
   isModalOpen: boolean;
   setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  modalBody: {
+    title: string;
+    content: string;
+  };
 }
 
 // A simple modal component which can be shown/hidden with a boolean and a function

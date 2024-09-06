@@ -6,11 +6,21 @@ import toJSON from "./plugins/toJSON";
 // The <ButtonLead /> component & the /api/lead route are used to collect the emails
 const leadSchema = new mongoose.Schema(
   {
+    name: {
+      type: String,
+      trim: true,
+      required: true,
+    },
     email: {
       type: String,
       trim: true,
       lowercase: true,
       private: true,
+      required: true,
+    },
+    message: {
+      type: String,
+      trim: true,
       required: true,
     },
   },
