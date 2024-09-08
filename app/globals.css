@@ -7,10 +7,10 @@ body {
   scroll-behavior: smooth !important;
 }
 
-/* Apply cupcake theme globally */
-html {
-  data-theme: 'nord';
-}
+/* Remove the global theme setting */
+/* html {
+  data-theme: 'dracula';
+} */
 
 /* It makes the HTML progress bar filling smooth when value change. */
 progress::-webkit-progress-value {
@@ -24,4 +24,119 @@ progress::-webkit-progress-value {
   .btn {
     @apply !capitalize;
   }
+}
+
+/* SEO Flow Chart Styles */
+.seo-flow-chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.seo-flow-chart .step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+  animation-delay: calc(var(--order) * 0.5s);
+}
+
+.seo-flow-chart .icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #3498db, #8e44ad);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  animation: pulse 2s infinite;
+}
+
+.seo-flow-chart .arrow {
+  width: 40px;
+  height: 2px;
+  background-color: #3498db;
+  position: relative;
+}
+
+.seo-flow-chart .arrow::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: -4px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid #3498db;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Responsive design for SEO Flow Chart */
+@media (max-width: 768px) {
+  .seo-flow-chart {
+    flex-direction: column;
+  }
+
+  .seo-flow-chart .arrow {
+    transform: rotate(90deg);
+    margin: 1rem 0;
+  }
+}
+
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-down {
+  animation: fade-in-down 0.5s ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
 }

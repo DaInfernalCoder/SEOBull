@@ -1,6 +1,14 @@
+"use client";
 import Image from "next/image";
 
 const CTA = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact-section');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative hero overflow-hidden min-h-screen">
       <Image
@@ -16,10 +24,15 @@ const CTA = () => {
             You don&apos;t want your competition to take your ranking. Do you? 
           </h2>
           <p className="text-lg opacity-80 mb-12 md:mb-16">
-            Boost your revenue, increase your website traffic, and get to the top of search results now!
+            Boost your revenue, increase your website traffic, and get to the top of search results
           </p>
 
-          <button className="btn btn-primary btn-wide btn-lg font-bold text-xl">Dominate the Market Now!</button>
+          <button 
+            className="btn btn-primary btn-wide btn-lg font-bold text-xl"
+            onClick={scrollToContact}
+          >
+            Dominate the Market Now!
+          </button>
         </div>
       </div>
     </section>

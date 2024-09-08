@@ -65,8 +65,8 @@ const TestimonialsAvatars = ({ priority }: { priority?: boolean }) => {
           ))}
         </div>
 
-        <div className="text-base text-base-content/80">
-          <span className="font-semibold text-base-content"></span> Join our growing list of business owners
+        <div className="text-base text-gray-700">
+          <span className="font-semibold text-gray-800"></span> Join our growing list of business owners
           increasing their revenue
         </div>
       </div>

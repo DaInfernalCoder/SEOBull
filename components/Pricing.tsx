@@ -78,7 +78,7 @@ const Pricing = () => {
                       plan.name === "Local SEO Package"
                         ? "/local-seo"
                         : plan.name === "National SEO Package"
-                        ? "/national-seo"
+                        ? "/local-seo"
                         : "/web-dev"
                     }
                   >

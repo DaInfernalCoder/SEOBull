@@ -83,16 +83,18 @@ const ContactUs = () => {
 
   return (
     <>
-      <div id="contact">
+      <div id="contact-section">
         <main className="container mx-auto flex justify-center items-center py-8">
           <div className="w-full max-w-2xl">
-            <h2 className="text-2xl font-semibold mb-6">Contact Us</h2>
+            <h2 className="text-2xl font-semibold mb-6 text-white">
+              Contact Us
+            </h2>
             <form
               onSubmit={handleSubmit}
               className="grid grid-cols-1 md:grid-cols-2 gap-4"
             >
               <div>
-                <label htmlFor="name" className="block text-gray-600">
+                <label htmlFor="name" className="block text-white">
                   Your Name
                 </label>
                 <input
@@ -106,7 +108,7 @@ const ContactUs = () => {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-gray-600">
+                <label htmlFor="email" className="block text-white">
                   Your Email
                 </label>
                 <input
@@ -120,7 +122,7 @@ const ContactUs = () => {
                 />
               </div>
               <div>
-                <label htmlFor="companyName" className="block text-gray-600">
+                <label htmlFor="companyName" className="block text-white">
                   Company Name
                 </label>
                 <input
@@ -134,7 +136,7 @@ const ContactUs = () => {
                 />
               </div>
               <div>
-                <label htmlFor="industry" className="block text-gray-600">
+                <label htmlFor="industry" className="block text-white">
                   Type of Industry
                 </label>
                 <input
@@ -148,7 +150,7 @@ const ContactUs = () => {
                 />
               </div>
               <div>
-                <label htmlFor="websiteUrl" className="block text-gray-600">
+                <label htmlFor="websiteUrl" className="block text-white">
                   Current Website URL
                 </label>
                 <input
@@ -162,7 +164,7 @@ const ContactUs = () => {
                 />
               </div>
               <div>
-                <label htmlFor="businessGoals" className="block text-gray-600">
+                <label htmlFor="businessGoals" className="block text-white">
                   What are your business goals?
                 </label>
                 <input
@@ -176,7 +178,7 @@ const ContactUs = () => {
                 />
               </div>
               <div>
-                <label htmlFor="state" className="block text-gray-600">
+                <label htmlFor="state" className="block text-white">
                   State
                 </label>
                 <input
@@ -190,7 +192,7 @@ const ContactUs = () => {
                 />
               </div>
               <div>
-                <label htmlFor="city" className="block text-gray-600">
+                <label htmlFor="city" className="block text-white">
                   City
                 </label>
                 <input
@@ -204,7 +206,9 @@ const ContactUs = () => {
                 />
               </div>
               <div className="md:col-span-2">
-                <h3 className="block text-gray-600 font-semibold mb-2">My Service</h3>
+                <h3 className="block text-white font-semibold mb-2">
+                  My Service
+                </h3>
                 <div className="flex flex-wrap gap-4">
                   <label className="inline-flex items-center">
                     <input
@@ -214,7 +218,7 @@ const ContactUs = () => {
                       onChange={handleInputChange}
                       className="form-checkbox h-5 w-5 text-blue-600"
                     />
-                    <span className="ml-2 text-gray-700">Website</span>
+                    <span className="ml-2 text-white">Website</span>
                   </label>
                   <label className="inline-flex items-center">
                     <input
@@ -224,7 +228,7 @@ const ContactUs = () => {
                       onChange={handleInputChange}
                       className="form-checkbox h-5 w-5 text-blue-600"
                     />
-                    <span className="ml-2 text-gray-700">Local SEO</span>
+                    <span className="ml-2 text-white">SEO</span>
                   </label>
                   <label className="inline-flex items-center">
                     <input
@@ -234,12 +238,12 @@ const ContactUs = () => {
                       onChange={handleInputChange}
                       className="form-checkbox h-5 w-5 text-blue-600"
                     />
-                    <span className="ml-2 text-gray-700">National SEO</span>
+                    <span className="ml-2 text-white">Other</span>
                   </label>
                 </div>
               </div>
               <div className="md:col-span-2">
-                <label htmlFor="message" className="block text-gray-600">
+                <label htmlFor="message" className="block text-white">
                   Message
                 </label>
                 <textarea
@@ -252,9 +256,46 @@ const ContactUs = () => {
                   required
                 ></textarea>
               </div>
-              <div className="md:col-span-2">
-                <button type="submit" className="btn btn-primary btn-wide">
+              <div className="md:col-span-2 flex flex-col items-center">
+                <button type="submit" className="btn btn-primary btn-wide mb-4">
                   Send Message
+                </button>
+
+                <button
+                  type="button"
+                  className="btn btn-secondary btn-wide flex items-center justify-center mb-4 py-3 text-s"
+                  onClick={() => {
+                    /* Phone button click handler */
+                  }}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 mr-2"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                  </svg>
+                  832-712-4168
+                </button>
+
+                <button
+                  type="button"
+                  className="btn normal-case flex items-center justify-between px-11 py-3 text-s w-full max-w-md"
+                  onClick={() => {
+                    /* Email button click handler */
+                  }}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                  </svg>
+                  <span className="truncate text-center flex-grow">customerservice@digitalseobull.com</span>
                 </button>
               </div>
             </form>
