@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { getSEOTags, viewport } from "../libs/seo";
 import ClientLayout from "../components/LayoutClient";
 import config from "../config";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css";
 
 const font = Inter({ subsets: ["latin"] });
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {/* ClientLayout contains all the client wrappers (Crisp chat support, toast messages, tooltips, etc.) */}
         <ClientLayout>{children}</ClientLayout>
       </body>
+      <SpeedInsights />
     </html>
   );
 }

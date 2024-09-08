@@ -550,6 +550,11 @@
     "@typescript-eslint/types" "6.4.1"
     eslint-visitor-keys "^3.4.1"
 
+"@vercel/speed-insights@^1.0.12":
+  version "1.0.12"
+  resolved "https://registry.npmjs.org/@vercel/speed-insights/-/speed-insights-1.0.12.tgz"
+  integrity sha512-ZGQ+a7bcfWJD2VYEp2R1LHvRAMyyaFBYytZXsfnbOMkeOvzGNVxUL7aVUvisIrTZjXTSsxG45DKX7yiw6nq2Jw==
+
 "@webassemblyjs/ast@^1.12.1", "@webassemblyjs/ast@1.12.1":
   version "1.12.1"
   resolved "https://registry.npmjs.org/@webassemblyjs/ast/-/ast-1.12.1.tgz"
@@ -3150,7 +3155,7 @@ next-sitemap@^4.2.2:
     fast-glob "^3.2.12"
     minimist "^1.2.8"
 
-next@*, "next@^12.2.5 || ^13 || ^14", next@^14.2.7, "next@>= 6.0.0":
+next@*, "next@^12.2.5 || ^13 || ^14", next@^14.2.7, "next@>= 13", "next@>= 6.0.0":
   version "14.2.7"
   resolved "https://registry.npmjs.org/next/-/next-14.2.7.tgz"
   integrity sha512-4Qy2aK0LwH4eQiSvQWyKuC7JXE13bIopEQesWE0c/P3uuNRnZCQanI0vsrMLmUQJLAto+A+/8+sve2hd+BQuOQ==
@@ -3658,7 +3663,7 @@ react-tooltip@^5.21.1:
     "@floating-ui/dom" "^1.0.0"
     classnames "^2.3.0"
 
-react@*, "react@^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0", "react@^16 || ^17 || ^18", "react@^17.0.2 || ^18", react@^18.0.0, react@^18.2.0, "react@>= 0.14.0", "react@>= 16.0.0", "react@>= 16.3.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", react@>=16, react@>=16.14.0:
+react@*, "react@^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0", "react@^16 || ^17 || ^18", "react@^17.0.2 || ^18", "react@^18 || ^19", react@^18.0.0, react@^18.2.0, "react@>= 0.14.0", "react@>= 16.0.0", "react@>= 16.3.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", react@>=16, react@>=16.14.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
