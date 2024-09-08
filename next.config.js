@@ -10,6 +10,9 @@ const nextConfig = {
       "logos-world.net",
     ],
   },
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
+  },
 };
 
 module.exports = nextConfig;
