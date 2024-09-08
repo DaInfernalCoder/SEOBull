@@ -1,6 +1,6 @@
-/*import { NextResponse, NextRequest } from "next/server";
-import connectMongo from "../../libs/mongoose";
-import Lead from "../../models/Lead";
+import { NextResponse, NextRequest } from "next/server";
+import connectMongo from "../../../libs/mongoose";
+import Lead from "../../../models/Lead";
 
 // This route is used to store the leads that are generated from the landing page.
 // The API call is initiated by <ButtonLead /> component
@@ -30,4 +30,3 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: e.message }, { status: 500 });
   }
 }
-*/

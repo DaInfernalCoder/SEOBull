@@ -1,6 +1,6 @@
-/*import Link from "next/link";
-//import { getSEOTags } from "../libs/seo.ts"; // Make sure the file extension is correct
-//import config from "../config.ts"; // Make sure the file extension is correct
+import Link from "next/link";
+import { getSEOTags } from "../../libs/seo"; // Make sure the file extension is correct
+import config from "../../config"; // Make sure the file extension is correct
 
 // CHATGPT PROMPT TO GENERATE YOUR TERMS & SERVICES — replace with your own data 👇
 
@@ -97,4 +97,3 @@ Thank you for using ShipFast!`}
 };
 
 export default TOS;
-*/
