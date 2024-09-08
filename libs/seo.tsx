@@ -1,8 +1,15 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import config from "../config";
 
+// Separate viewport configuration
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 // These are all the SEO tags you can add to your pages.
-// It prefills data with default title/description/OG, etc.. and you can cusotmize it for each page.
+// It prefills data with default title/description/OG, etc.. and you can customize it for each page.
 // It's already added in the root layout.js so you don't have to add it to every pages
 // But I recommend to set the canonical URL for each page (export const metadata = getSEOTags({canonicalUrlRelative: "/"});)
 // See https://shipfa.st/docs/features/seo
@@ -31,11 +38,6 @@ export const getSEOTags = ({
         ? "http://localhost:3000/"
         : `https://${config.domainName}/`
     ),
-    viewport: {
-      width: "device-width",
-      initialScale: 1,
-      maximumScale: 1,
-    },
     // Will use the primary color of your theme to show a nice theme color in the URL bar of supported browsers
     themeColor: config.colors.main,
 
