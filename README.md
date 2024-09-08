@@ -1,4 +1,4 @@
-# ShipFast — Typescript
+SEO Bull 
 
-fork of a populer starter template
+A landing page for a startup that brings your website to the top of search results
 
