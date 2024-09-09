@@ -5,7 +5,7 @@ import ClientLayout from "../components/LayoutClient";
 import config from "../config";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css";
-
+import { Analytics } from "@vercel/analytics/react"
 const font = Inter({ subsets: ["latin"] });
 
 // This adds default SEO tags to all pages in our app.
@@ -32,6 +32,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <ClientLayout>{children}</ClientLayout>
       </body>
       <SpeedInsights />
+      <Analytics />
     </html>
   );
 }

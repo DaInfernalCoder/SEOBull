@@ -506,6 +506,7 @@ const LocalSEOPage: React.FC = () => {
             </div>
           </div>
         </AnimatedSection>
+        
       </main>
       <div ref={contactRef}>
         <ContactUs />
