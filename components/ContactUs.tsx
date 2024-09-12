@@ -48,6 +48,23 @@ const ContactUs = () => {
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 
+    // Check if all required fields are filled
+    const requiredFields = [
+      'name', 'email', 'companyName', 'industry', 'websiteUrl',
+      'businessGoals', 'state', 'city', 'message'
+    ];
+
+    const isFormValid = requiredFields.every(field => formData[field].trim() !== '');
+
+    if (!isFormValid) {
+      setModalBody({
+        title: "Incomplete Form",
+        content: "Please fill in all required fields before submitting.",
+      });
+      setIsModalOpen(true);
+      return;
+    }
+
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -95,7 +112,7 @@ const ContactUs = () => {
             >
               <div>
                 <label htmlFor="name" className="block text-white">
-                  Your Name
+                  Your Name *
                 </label>
                 <input
                   type="text"
@@ -296,6 +313,7 @@ const ContactUs = () => {
                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                   </svg>
                   <span className="truncate text-center flex-grow">customerservice@digitalseobull.com</span>
+                  
                 </button>
               </div>
             </form>
