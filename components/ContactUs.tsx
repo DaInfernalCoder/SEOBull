@@ -7,6 +7,7 @@ const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "", // Added new phone field
     message: "",
     industry: "",
     businessGoals: "",
@@ -50,7 +51,7 @@ const ContactUs = () => {
 
     // Check if all required fields are filled
     const requiredFields = [
-      'name', 'email', 'companyName', 'industry', 'websiteUrl',
+      'name', 'email', 'phone', 'companyName', 'industry', 'websiteUrl',
       'businessGoals', 'state', 'city', 'message'
     ];
 
@@ -126,7 +127,7 @@ const ContactUs = () => {
               </div>
               <div>
                 <label htmlFor="email" className="block text-white">
-                  Your Email
+                  Your Email *
                 </label>
                 <input
                   type="email"
@@ -139,8 +140,22 @@ const ContactUs = () => {
                 />
               </div>
               <div>
+                <label htmlFor="phone" className="block text-white">
+                  Your Phone Number *
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  className="w-full p-2 border border-gray-300 rounded"
+                  required
+                />
+              </div>
+              <div>
                 <label htmlFor="companyName" className="block text-white">
-                  Company Name
+                  Company Name *
                 </label>
                 <input
                   type="text"
@@ -154,7 +169,7 @@ const ContactUs = () => {
               </div>
               <div>
                 <label htmlFor="industry" className="block text-white">
-                  Type of Industry
+                  Type of Industry *
                 </label>
                 <input
                   type="text"
@@ -168,7 +183,7 @@ const ContactUs = () => {
               </div>
               <div>
                 <label htmlFor="websiteUrl" className="block text-white">
-                  Current Website URL
+                  Current Website URL (include https://) *
                 </label>
                 <input
                   type="url"
@@ -182,7 +197,7 @@ const ContactUs = () => {
               </div>
               <div>
                 <label htmlFor="businessGoals" className="block text-white">
-                  What are your business goals?
+                  What are your business goals? *
                 </label>
                 <input
                   type="text"
@@ -196,7 +211,7 @@ const ContactUs = () => {
               </div>
               <div>
                 <label htmlFor="state" className="block text-white">
-                  State
+                  State *
                 </label>
                 <input
                   type="text"
@@ -210,7 +225,7 @@ const ContactUs = () => {
               </div>
               <div>
                 <label htmlFor="city" className="block text-white">
-                  City
+                  City *
                 </label>
                 <input
                   type="text"
@@ -261,7 +276,7 @@ const ContactUs = () => {
               </div>
               <div className="md:col-span-2">
                 <label htmlFor="message" className="block text-white">
-                  Message
+                  Message *
                 </label>
                 <textarea
                   id="message"
