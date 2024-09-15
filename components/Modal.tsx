@@ -18,14 +18,13 @@ interface ModalProps {
 // Because of the setIsModalOpen function, you can't use it in a server component.
 const Modal = ({ isModalOpen, setIsModalOpen, modalBody }: ModalProps) => {
   return (
-    <Transition appear show={isModalOpen} as={Fragment}>
+    <Transition appear show={isModalOpen}>
       <Dialog
         as="div"
         className="relative z-50"
         onClose={() => setIsModalOpen(false)}
       >
         <Transition.Child
-          as={Fragment}
           enter="ease-out duration-300"
           enterFrom="opacity-0"
           enterTo="opacity-100"
@@ -39,7 +38,6 @@ const Modal = ({ isModalOpen, setIsModalOpen, modalBody }: ModalProps) => {
         <div className="fixed inset-0 overflow-y-auto">
           <div className="flex min-h-full overflow-hidden items-start md:items-center justify-center p-2">
             <Transition.Child
-              as={Fragment}
               enter="ease-out duration-300"
               enterFrom="opacity-0 scale-95"
               enterTo="opacity-100 scale-100"
