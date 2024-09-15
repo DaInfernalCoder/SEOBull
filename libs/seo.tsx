@@ -41,6 +41,12 @@ export const getSEOTags = ({
     // Will use the primary color of your theme to show a nice theme color in the URL bar of supported browsers
     themeColor: config.colors.main,
 
+    // Add the robots field to allow indexing and following
+    robots: {
+      index: true,
+      follow: true,
+    },
+
     openGraph: {
       title: openGraph?.title || config.appName,
       description: openGraph?.description || config.appDescription,
