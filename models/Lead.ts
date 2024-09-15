@@ -15,6 +15,11 @@ const leadSchema = new mongoose.Schema(
       private: true,
       required: true,
     },
+    phone: {
+      type: String,
+      trim: true,
+      required: true,
+    },
     message: {
       type: String,
       trim: true,

@@ -14,6 +14,7 @@ export async function POST(req: NextRequest) {
     const { 
       name, 
       email, 
+      phone, // Added phone field
       message, 
       companyName, 
       industry, 
@@ -26,7 +27,7 @@ export async function POST(req: NextRequest) {
 
     // Check if all required fields are present
     const requiredFields = [
-      'name', 'email', 'message', 'companyName', 'industry', 
+      'name', 'email', 'phone', 'message', 'companyName', 'industry', 
       'websiteUrl', 'businessGoals', 'state', 'city'
     ];
     const missingFields = requiredFields.filter(field => !body[field]);
@@ -42,6 +43,7 @@ export async function POST(req: NextRequest) {
     const newLead = new Lead({
       name,
       email,
+      phone, // Added phone field
       message,
       companyName,
       industry,
