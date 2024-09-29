@@ -313,7 +313,7 @@ const ContactUs = () => {
 
                 <button
                   type="button"
-                  className="btn normal-case flex items-center justify-between px-11 py-3 text-s w-full max-w-md"
+                  className="btn normal-case flex items-center justify-between px-11 py-3 text-s w-full max-w-md mb-4"
                   onClick={() => {
                     /* Email button click handler */
                   }}
@@ -328,7 +328,24 @@ const ContactUs = () => {
                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                   </svg>
                   <span className="truncate text-center flex-grow">customerservice@digitalseobull.com</span>
-                  
+                </button>
+
+                <button 
+                  type="button"
+                  className="btn normal-case flex items-center justify-between px-11 py-3 text-s w-full max-w-md"
+                  onClick={() => {
+                    /* Address button click handler */
+                  }}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                  </svg>
+                  <span className="truncate text-center flex-grow">5307 Metzger Court, Houston, TX 77479</span>
                 </button>
               </div>
             </form>

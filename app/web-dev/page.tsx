@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, ReactNode, FC } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import ContactUs from "../../components/ContactUs";
@@ -28,9 +28,9 @@ const WebDevelopmentPage: React.FC = () => {
   };
 
 
-  const AnimatedSection: React.FC<{ children: React.ReactNode }> = ({
+  const AnimatedSection: FC<{ children: ReactNode }> = ({
     children,
-  }) => {
+  }: { children: ReactNode }) => {
     const controls = useAnimation();
     const [ref, inView] = useInView({
       triggerOnce: true,
